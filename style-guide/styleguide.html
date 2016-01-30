@@ -13,13 +13,31 @@
             background: none;
             border: none;
         }
-        .img-responsive{
+        .navbar .img-responsive{
             max-width: 100px;
+        }
+        #logo-img-home-down .img-responsive{
+            max-width: 30px;
+        }
+        #logo-img-brand-down .img-responsive{
+            max-width: 80px;
+        }
+        .navbar .input-group{
+            max-width: 180px;
+        }
+        #logo-img-brand .input-group{
+            max-width: 300px;
+        }
+        [id*=logo-img]{
+            width: auto;
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-default" id="userNavigation" role="navigation">
+    <nav class="navbar navbar-default navbar-inverse" id="userNavigation" role="navigation">
         <div class="container">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -49,25 +67,106 @@
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-default" id="logo-Cart" role="navigation">
+    <nav class="navbar navbar-default text-center" id="logo-img-home" role="navigation">
         <div class="container">
-            <ul class="nav navbar-nav">
-                <li role="presentation"><a href="#">brandProduct1</a></li>
-                <li role="presentation"><a href="#">brandProduct2</a></li>
-                <li role="presentation"><a href="#">brandProduct3</a></li>
-                <div class="col-md-2">
-                    <li role="presentation">
-                        <div class="input-group">
-                            <input type="text" class="form-control">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button>
-                            </span>
-                        </div>
-                    </li>
-                </div>
+            <ul class="nav navbar-nav navbar-left">
+                <li role="presentation"><a href="#">
+                    <img alt="Brand" class="img-responsive" src="pic/images.png">
+                </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation"><a href="#">新机首发</a></li>
+                <li role="presentation"><a href="#">品牌馆</a></li>
+                <li role="presentation"><a href="#">配件选购</a></li>
+                <li role="presentation"><a href="#">测评资讯</a></li>
+                <li role="presentation"><a href="#">社区</a></li>
+                <li role="presentation"><a href="#">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-default">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </span>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default text-center" id="logo-img-home-down" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left">
+                <li role="presentation"><a href="#">
+                    <img alt="Brand" class="img-responsive" src="pic/images.png">
+                </a></li>
+                <li role="presentation"><a href="#">创客社区</a></li>
+                <li role="presentation"><a href="#">关于我们</a></li>
+                <li role="presentation"><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default text-center" id="logo-img-brand-down" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left">
+                <li role="presentation">
+                    <p title="Phone" class="text-left">售前服务热线：400-700-0333</p>
+                    <p title="Phone" class="text-left">技术支持服务热线：400-700-0303</p>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation"><a href="http://www.dji.com/">
+                    <img alt="Brand" class="img-responsive" src="http://www4.djicdn.com/assets/images/logo@2x-da7b16c3c5788410b42880cd8a8cfeca.png">
+                </a></li>
 
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default text-center" id="logo-img-cart" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left">
+                <li role="presentation"><a href="#">
+                    <img alt="Brand" class="img-responsive" src="pic/images.png">
+                </a></li>
+                <li role="presentation"><a href="#"><h1>购物车</h1></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation"><a href="#">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                <span class="input-group-btn">
+                    <button class="btn btn-default">
+                        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    </button>
+                </span>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default text-center" id="logo-img-brand" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left">
+                <li role="presentation"><a href="#">
+                    <img alt="Brand" class="img-responsive" src="pic/images.png">
+                </a></li>
+                <li role="presentation"><a href="#">
+                    <img alt="Brand" class="img-responsive" src="http://www4.djicdn.com/assets/images/logo@2x-da7b16c3c5788410b42880cd8a8cfeca.png">
+                </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation"><a href="#">关于大疆</a></li>
+                <li role="presentation"><a href="#">大疆社区</a></li>
+                <li role="presentation"><a href="#">
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                <span class="input-group-btn">
+                   <button class="btn btn-default">搜全站</button>
+                </span>
+                <span class="input-group-btn">
+                   <button class="btn btn-default">搜本店</button>
+                </span>
+                    </div>
+                </a></li>
             </ul>
         </div>
     </nav>
@@ -102,9 +201,6 @@
             <button type="button" class="btn btn-default" aria-label="Left Align">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             </button>
-            <!--<button type="button" class="btn btn-default" aria-label="Left Align">-->
-                <!--<span class="glyphicon glyphicon-search" aria-hidden="true"></span>-->
-            <!--</button>-->
             <button type="button" class="btn btn-default" aria-label="Left Align">
                 <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                 新增收货地址
@@ -141,38 +237,9 @@
         </div>
     </div>
 
-    <div class="navbar navbar-default" id="logo-index">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">
-                    <img alt="Brand" class="img-responsive" src="pic/images.png">
-                </a>
-            </div>
-            <div class="navbar-collapse collapse" role="navigation">
-                <ul class="nav navbar-nav navbar-right">
-                    <li role="presentation"><a href="#">新机首发</a></li>
-                    <li role="presentation"><a href="#">品牌馆</a></li>
-                    <li role="presentation"><a href="#">配件选购</a></li>
-                    <li role="presentation"><a href="#">测评资讯</a></li>
-                    <li role="presentation"><a href="#">社区</a></li>
-                    <div class="col-md-2">
-                        <li role="presentation">
-                            <div class="input-group">
-                                <input type="text" class="form-control">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                </button>
-                            </span>
-                            </div>
-                        </li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </div>
 
     <script src="script/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
