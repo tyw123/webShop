@@ -1,0 +1,41 @@
+.navbar-default{
+    margin-bottom:0px;
+}
+[id*=logo-]{
+    background: none;
+    border: none;
+}
+.navbar .img-responsive{
+    max-width: 100px;
+}
+#img-home-down .img-responsive{
+    max-width: 30px;
+}
+#logo-img-brand-down .img-responsive{
+    max-width: 80px;
+}
+.navbar .input-group{
+    max-width: 180px;
+}
+#logo-img-brand .input-group{
+    max-width: 300px;
+}
+[id*=logo-img]{
+    width: auto;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*#ttta{*/
+    /*background-color:wheat;*/
+    /*padding: 0px;*/
+    /*vertical-align: bottom;*/
+/*}*/
+
+/*#ttt {*/
+    /*background-color:wheat;*/
+    /*vertical-align: middle;*/
+/*}*/
+/*td{*/
+    /*vertical-align: middle;*/
+/*}*/

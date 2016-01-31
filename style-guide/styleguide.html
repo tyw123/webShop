@@ -5,41 +5,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>styleGuide</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .navbar-default{
-            margin-bottom:0px;
-        }
-        [id*=logo-]{
-            background: none;
-            border: none;
-        }
-        .navbar .img-responsive{
-            max-width: 100px;
-        }
-        #img-home-down .img-responsive{
-            max-width: 30px;
-        }
-        #logo-img-brand-down .img-responsive{
-            max-width: 80px;
-        }
-        .navbar .input-group{
-            max-width: 180px;
-        }
-        #logo-img-brand .input-group{
-            max-width: 300px;
-        }
-        [id*=logo-img]{
-            width: auto;
-            display: table;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+    <link href="css/styleguide.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-default navbar-inverse" id="userNavigation" role="navigation">
         <div class="container">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right" >
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         我的账户
@@ -60,7 +31,7 @@
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-default" id="logo-brandProduct" role="navigation">
+    <nav class="navbar navbar-default" id="logo-brandProduct" role="navigation" style="align-items: center">
         <div class="container">
             <ul class="nav navbar-nav navbar-left">
                 <li role="presentation"><a href="#">brandProduct1</a></li>
@@ -70,7 +41,7 @@
             </ul>
         </div>
     </nav>
-    <nav class="navbar navbar-default text-center" id="logo-img-home" role="navigation">
+    <nav class="navbar navbar-default " id="logo-img-home" role="navigation">
         <div class="container">
             <ul class="nav navbar-nav navbar-left">
                 <li role="presentation"><a href="#">
@@ -78,13 +49,13 @@
                 </a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li role="presentation"><a href="#">新机首发</a></li>
-                <li role="presentation"><a href="#">品牌馆</a></li>
-                <li role="presentation"><a href="#">配件选购</a></li>
-                <li role="presentation"><a href="#">测评资讯</a></li>
-                <li role="presentation"><a href="#">社区</a></li>
-                <li role="presentation"><a href="#">
-                    <div class="input-group">
+                <li role="presentation"><a href="#" style="line-height: 65px">新机首发</a></li>
+                <li role="presentation"><a href="#" style="line-height: 65px">品牌馆</a></li>
+                <li role="presentation"><a href="#" style="line-height: 65px">配件选购</a></li>
+                <li role="presentation"><a href="#" style="line-height: 65px">测评资讯</a></li>
+                <li role="presentation"><a href="#" style="height: 130px;line-height: 65px;">社区</a></li>
+                <li role="presentation" style="height: 95px;vertical-align: middle"><a href="#">
+                    <div class="input-group" style="vertical-align: middle">
                         <input type="text" class="form-control">
                 <span class="input-group-btn">
                     <button class="btn btn-default">
@@ -98,13 +69,13 @@
     </nav>
     <nav class="navbar navbar-default text-center" id="img-home-down" role="navigation">
         <div class="container">
-            <ul class="nav navbar-nav navbar-left">
+            <ul class="nav navbar-nav navbar-left" >
                 <li role="presentation"><a href="#">
                     <img alt="Brand" class="img-responsive" src="pic/images.png">
                 </a></li>
-                <li role="presentation"><a href="#">创客社区</a></li>
-                <li role="presentation"><a href="#">关于我们</a></li>
-                <li role="presentation"><a href="#">联系我们</a></li>
+                <li role="presentation"><a href="#" style="line-height: 30px">创客社区</a></li>
+                <li role="presentation"><a href="#" style="line-height: 30px">关于我们</a></li>
+                <li role="presentation"><a href="#" style="line-height: 30px">联系我们</a></li>
             </ul>
         </div>
     </nav>
@@ -255,59 +226,57 @@
                                 <th> </th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="flex-center">
                             <tr>
-
-                                <th>
+                                <td style="vertical-align: middle">
                                     <input class="btn btn-default" type="radio">
                                     name
-                                </th>
-                                <th>
+                                </td>
+                                <td style="vertical-align: middle">
                                     address
-                                </th>
-                                <th>
+                                </td>
+                                <td style="vertical-align: middle">
                                     phone
-                                </th>
-                                <th>
+                                </td>
+                                <td style="vertical-align: middle">
                                     <button type="button" class="btn btn-default" aria-label="Left Align">
                                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                     </button>
                                     <button type="button" class="btn btn-default" aria-label="Left Align">
                                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                     </button>
-                                </th>
+                                </td>
                             </tr>
                             <tr>
-
-                                <th>
+                                <td style="vertical-align: middle">
                                     <input class="btn btn-default" type="radio">
                                     name
-                                </th>
-                                <th>
+                                </td>
+                                <td style="vertical-align: middle">
                                     address
-                                </th>
-                                <th>
+                                </td>
+                                <td style="vertical-align: middle">
                                     phone
-                                </th>
-                                <th>
+                                </td>
+                                <td style="vertical-align: middle">
                                     <button type="button" class="btn btn-default" aria-label="Left Align">
                                         <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
                                     </button>
                                     <button type="button" class="btn btn-default" aria-label="Left Align">
                                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                     </button>
-                                </th>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading" >
                     我的购物车
                 </div>
-                <div class="panel-body">
-                    <table class="table">
+                <div class="panel-body" >
+                    <table class="table" >
                         <thead>
                         <tr>
                             <th>商品</th>
@@ -318,51 +287,51 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <th>
+                        <tr >
+                            <td>
                                 <input class="btn btn-default" type="checkbox">
                                 <img src="//asset1.djicdn.com/uploads/product_store_photo/image/15011/medium_1200x800v2.jpg" width="150">
                                 name
-                            </th>
-                            <th>
+                            </td>
+                            <td style="vertical-align: middle">
                                 <p>RMB￥xxxx</p>
-                            </th>
-                            <th>
+                            </td>
+                            <td style="vertical-align: middle">
                                 <div class="input-group">
                                     <input type="number" class="form-control" placeholder="1" width="150">
                                 </div>
-                            </th>
-                            <th>
+                            </td>
+                            <td style="vertical-align: middle">
                                 <p>RMB￥xxxx</p>
-                            </th>
-                            <th>
+                            </td>
+                            <td style="vertical-align: middle" >
                                 <button type="button" class="btn btn-default" aria-label="Left Align">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </button>
-                            </th>
+                            </td>
                         </tr>
                         <tr>
-                            <th>
+                            <td>
                                 <input class="btn btn-default" type="checkbox">
                                 <img src="//asset1.djicdn.com/uploads/product_store_photo/image/15011/medium_1200x800v2.jpg" width="150">
                                 name
-                            </th>
-                            <th>
+                            </td>
+                            <td style="vertical-align: middle">
                                 <p>RMB￥<del>xxxx</del>xxxx</p>
-                            </th>
-                            <th>
+                            </td>
+                            <td style="vertical-align: middle">
                                 <div class="input-group">
                                     <input type="number" class="form-control" placeholder="1" width="150">
                                 </div>
-                            </th>
-                            <th>
+                            </td>
+                            <td style="vertical-align: middle">
                                 <p>RMB￥<del>xxxx</del>xxxx</p>
-                            </th>
-                            <th>
+                            </td>
+                            <td style="vertical-align: middle">
                                 <button type="button" class="btn btn-default" aria-label="Left Align">
                                     <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                                 </button>
-                            </th>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
@@ -370,6 +339,7 @@
             </div>
         </div>
     </div>
+
     <script src="script/jquery-1.11.3.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
