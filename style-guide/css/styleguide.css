@@ -1,4 +1,4 @@
-.navbar,.table,.tfoot p
+.navbar,.table,.tfoot p,.jumbotron, #thumbnail_box .container .row
 {
     border: 0px;
     margin: 0px;
@@ -38,8 +38,9 @@
 {
     position: relative;
     margin: 5px;
-    top: -300px;
-    height: 100px;
+    top: -320px;
+    height: 150px;
+    width: 50px;
     color: white;
     padding: 10px;
     background:rgba(0,40,60,0.7);
@@ -47,10 +48,12 @@
 .tool_group .prev
 {
     float: left;
+    margin-left: 50px;
 }
 .tool_group .next,.tfoot
 {
     float: right;
+    margin-right: 50px;
 }
 .slide_nav
 {
@@ -79,4 +82,36 @@
 .tfoot button
 {
     height: 40px;
+}
+.thumbnail
+{
+    /*width:285px;*/
+    float: left;
+}
+.thumbnail button
+{
+    position: relative;
+}
+.thumbnail_tool_group
+{
+    height: 0px;
+}
+.thumbnail_tool_group #quikeview
+{
+    top: -185px;
+}
+.thumbnail_tool_group #bigger
+{
+    top: -40px;
+    left: 93px;
+}
+.thumbnail_tool_group #heart
+{
+    top: -40px;
+    left: 93px;
+}
+.thumbnail_tool_group #add
+{
+    top: -185px;
+    left: 50px;
 }
