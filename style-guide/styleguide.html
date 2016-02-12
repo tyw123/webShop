@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>styleGuide</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styleguide.css" rel="stylesheet">
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-default" role="navigation">
+    <div class="userNav">
         <div class="container">
-            <ul class="nav navbar-nav navbar-right" >
+            <ul>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         我的账户
@@ -31,35 +32,36 @@
                 <li role="presentation"><a href="#">客户服务</a></li>
             </ul>
         </div>
-    </nav>
-    <nav class="navbar navbar-default" role="navigation">
+    </div>
+    <nav class="navbar navbar-default shopNav" role="navigation">
         <div class="container">
-            <ul class="nav navbar-nav navbar-left logo ">
+            <ul class="nav navbar-nav logo ">
                 <li role="presentation" ><a href="#">
-                    <img alt="Brand" class="img-responsive" src="pic/images.png">
+                    <!--<img alt="Brand" class="img-responsive" src="pic/images.png">-->
+                    <h1>UAV Shop </h1>
                 </a>
                 </li>
-                <li class="clearmargin">
+                <li>
                     <a href="#">
                         logo2
                     </a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav global_wrapper">
-                <li><a href="#">item1</a></li>
-                <li><a href="#">item1</a></li>
-                <li><a href="#">item1</a></li>
-                <li><a href="#">item1</a></li>
-                <li style="max-width: 300px;padding: 33px 0px">
+            <ul class="nav navbar-nav navbar-right global_wrapper">
+                <li><a href="#" class="upLine">item1</a></li>
+                <li><a href="#" class="upLine">item1</a></li>
+                <li><a href="#" class="upLine">item1</a></li>
+                <li><a href="#" class="upLine">item1</a></li>
+                <li>
                     <a href="#">
-                        <div class="input-group" >
+                        <div class="input-group searchBoth">
                             <input type="text" class="form-control">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default">搜全站</button>
-                                </span>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default">搜本店</button>
-                                </span>
+                <span class="input-group-btn">
+                   <button class="btn btn-black">搜全站</button>
+                </span>
+                <span class="input-group-btn">
+                   <button class="btn btn-black">搜本店</button>
+                </span>
                         </div>
                     </a>
                 </li>
@@ -77,100 +79,71 @@
         </ul>
     </div>
 </nav>
-<footer>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <ul class="nav navbar-nav navbar-left home_footer" >
-                <li role="presentation"><a href="#">
-                    <img alt="Brand" class="img-responsive" src="pic/images.png">
-                </a></li>
-                <li role="presentation"><a href="#">创客社区</a></li>
-                <li role="presentation"><a href="#">关于我们</a></li>
-                <li role="presentation"><a href="#">联系我们</a></li>
-            </ul>
-        </div>
-    </nav>
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <ul class="nav navbar-nav navbar-left">
-                <li role="presentation">
-                    <p title="Phone" class="text-left">售前服务热线：400-700-0333</p>
-                    <p title="Phone" class="text-left">技术支持服务热线：400-700-0303</p>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li role="presentation"><a href="http://www.dji.com/">
-                    <img alt="Brand" class="img-responsive" src="http://www4.djicdn.com/assets/images/logo@2x-da7b16c3c5788410b42880cd8a8cfeca.png">
-                </a></li>
-            </ul>
-        </div>
-    </nav>
-</footer>
 <div id="button">
     <div class="container">
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align" style="background-color: #51AFAF">
             <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
             继续购物
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             去结算
             <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
             新增收货地址
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             更多
         </button>
-        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
             QuikeView
         </button>
     </div>
 </div>
 <div id="input">
     <div class="container">
-        <div class="input-group">
+        <div class="input-group searchSingle">
             <input type="text" class="form-control">
                 <span class="input-group-btn">
-                    <button class="btn btn-default">
+                    <button class="btn btn-black">
                         <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
                     </button>
                 </span>
         </div>
-        <input class="btn btn-default" type="radio">
+        <input class="btn btn-default" type="radio" name="buyer">
         <input class="btn btn-default" type="checkbox">
-        <div class="input-group">
+        <div class="input-group searchBoth">
             <input type="text" class="form-control">
                 <span class="input-group-btn">
-                   <button class="btn btn-default">搜全站</button>
+                   <button class="btn btn-black">搜全站</button>
                 </span>
                 <span class="input-group-btn">
-                   <button class="btn btn-default">搜本店</button>
+                   <button class="btn btn-black">搜本店</button>
                 </span>
         </div>
-        <div class="input-group">
+        <div class="input-group" style="width:70px;">
             <input type="number" class="form-control" placeholder="1">
         </div>
     </div>
@@ -182,7 +155,7 @@
                 确认收货信息
             </div>
             <div class="panel-body">
-                <table class="table">
+                <table class="table cleanfix">
                     <thead>
                     <tr>
                         <th>收货人</th>
@@ -194,7 +167,7 @@
                     <tbody class="flex-center users">
                         <tr>
                         <td>
-                            <input class="btn btn-default" type="radio">
+                            <input class="btn btn-default" type="radio" name="buyer">
                             name
                         </td>
                         <td>
@@ -214,7 +187,7 @@
                     </tr>
                         <tr>
                         <td>
-                            <input class="btn btn-default" type="radio">
+                            <input class="btn btn-default" type="radio" name="buyer">
                             name
                         </td>
                         <td>
@@ -247,7 +220,7 @@
                 我的购物车
             </div>
             <div class="panel-body" >
-                <table class="table" >
+                <table class="table cleanfix" >
                     <thead>
                     <tr>
                         <th>商品</th>
@@ -268,8 +241,8 @@
                             <p>RMB￥xxxx</p>
                         </td>
                         <td>
-                            <div class="input-group">
-                                <input type="number" class="form-control" placeholder="1" width="150">
+                            <div class="input-group" style="width:70px;">
+                                <input type="number" class="form-control" placeholder="1">
                             </div>
                         </td>
                         <td>
@@ -291,8 +264,8 @@
                             <p>RMB￥<s>xxxx</s>xxxx</p>
                         </td>
                         <td>
-                            <div class="input-group">
-                                <input type="number" class="form-control" placeholder="1" width="150">
+                            <div class="input-group" style="width:70px;">
+                                <input type="number" class="form-control" placeholder="1">
                             </div>
                         </td>
                         <td>
@@ -308,8 +281,8 @@
                 </table>
                 <div class="tfoot col-md-4" style="text-align: right">
                     <div class="text-right col-md-8">
-                        <p>共计￥XXXX</p>
-                        <P>已节省￥XXXX</P>
+                        <p class="cleanfix">共计￥XXXX</p>
+                        <P class="cleanfix">已节省￥XXXX</P>
                     </div>
                     <button type="button" class="btn btn-default col-md-4" aria-label="Left Align">
                         去结算
@@ -321,30 +294,26 @@
     </div>
 </div>
 <div id="jumbotron">
-    <div class="jumbotron" style="background-color: white">
+    <div class="jumbotron cleanfix">
         <div class="container">
-            <img alt="Brand" class="img-responsive" src="pic/djisale.jpg">
-            <img alt="Brand" class="img-responsive hidden" src="pic/djisale2.jpg">
+            <img alt="Brand" class="img-responsive hidden" src="pic/djisale.jpg">
+            <img alt="Brand" class="img-responsive " src="pic/djisale2.jpg">
             <!--按钮放到里面，就有下边距，放到外面，padding又不知道怎么处理-->
         </div>
     </div>
     <div class="tool_group">
-        <button type="button" class="btn btn-default prev" aria-label="Left Align">
-            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-        </button>
-        <button type="button" class="btn btn-default next" aria-label="Left Align">
-            <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-        </button>
+        <span class="glyphicon glyphicon-menu-left prev" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-menu-right next" aria-hidden="true"></span>
     </div>
     <div class="slide_nav">
-        <i class="active"></i>
         <i></i>
+        <i class="active"></i>
     </div>
 </div>
 <div id="thumbnail_box">
     <div class="container">
         <div class="row">
-            <div class="thumbnail col-md-3">
+            <div class="thumbnail ">
                 <img src="pic/phantom3.jpg" alt="...">
                 <div class="thumbnail_tool_group">
                     <button type="button" class="btn btn-default" aria-label="Left Align" id="quikeview">
@@ -366,7 +335,7 @@
                     <p>...</p>
                 </div>
             </div>
-            <div class="thumbnail col-md-3">
+            <div class="thumbnail ">
                 <img src="pic/phantom3.jpg" alt="...">
                 <div class="thumbnail_tool_group">
                     <button type="button" class="btn btn-default" aria-label="Left Align" id="quikeview">
@@ -388,7 +357,7 @@
                     <p>...</p>
                 </div>
             </div>
-            <div class="thumbnail col-md-3">
+            <div class="thumbnail ">
                 <img src="pic/phantom3.jpg" alt="...">
                 <div class="thumbnail_tool_group">
                     <button type="button" class="btn btn-default" aria-label="Left Align" id="quikeview">
@@ -410,7 +379,7 @@
                     <p>...</p>
                 </div>
             </div>
-            <div class="thumbnail col-md-3">
+            <div class="thumbnail ">
                 <img src="pic/phantom3.jpg" alt="...">
                 <div class="thumbnail_tool_group">
                     <button type="button" class="btn btn-default" aria-label="Left Align" id="quikeview">
@@ -433,8 +402,90 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+        </div>
     </div>
 </div>
+<footer>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left home_footer" >
+                <li role="presentation"><a href="#">
+                    <img alt="Brand" class="img-responsive" src="pic/images.png">
+                </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right home_footer">
+                <li role="presentation"><a href="#">创客社区</a></li>
+                <li role="presentation"><a href="#">关于我们</a></li>
+                <li role="presentation"><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left">
+                <li role="presentation">
+                    <p title="Phone" class="text-left">售前服务热线：400-700-0333</p>
+                    <p title="Phone" class="text-left">技术支持服务热线：400-700-0303</p>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li role="presentation"><a href="http://www.dji.com/">
+                    <img alt="Brand" class="img-responsive" src="http://www4.djicdn.com/assets/images/logo@2x-da7b16c3c5788410b42880cd8a8cfeca.png">
+                </a></li>
+            </ul>
+        </div>
+    </nav>
+</footer>
+
 <script src="script/jquery-1.11.3.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 </body>
