@@ -6,9 +6,28 @@
     margin: 0px;
     padding: 0px;
 }
-
+button,.input-group-btn button
+{
+    outline: none;
+    border: 0px;
+    border-radius: 4px;
+    padding: 7px 13px;
+}
+strong
+{
+    font-size: 20px;
+}
+.back_blue
+{
+    background-color: #399494;
+    color: #E6F0F3;
+}
 /*导航栏*/
     /*用户导航栏*/
+header
+{
+    margin:5px 0px;
+}
 .userNav
 {
     height: 35px;
@@ -81,15 +100,12 @@
 {
     border-top: 3px solid #399494;
 }
-.logo .img-responsive
-{
-    max-width: 30px;
-}
 .logo>li>a
 {
     border-right: 1px solid #E6E6E6;
     padding: 0px 10px;
     margin: 30px 0px;
+    text-shadow: 4px 4px 4px #333;
 }
 
 /*巨幕*/
@@ -146,23 +162,54 @@
     background-color: #399494;
 }
 
-
-.home_footer .img-responsive
+/*按钮*/
+.btn-lightBlu,.btn-lightBlu:visited
 {
-    max-width: 80px;
+    background-color: #49A7A7;
+    color: #E6F0F3;
 }
-.home_footer li a
+.btn-lightBlu:hover,.btn-lightBlu:active
 {
-    width: 120px;
-    line-height: 5;
-    margin: 5px;;
+    background-color:#399494;
+    color: #ffffff;
+
+}
+/*btn-black:visited---尚未解决，去掉btn，按钮组的样式出问题，保存btn,无法设定自定义的visited样式*/
+.btn-black,.btn-black:visited
+{
+    background-color: #333;
+    color: #ffffff;
+}
+.btn-black:hover,.btn-black:active
+{
+    background-color:#399494;
+    color: #E6F0F3;
+}
+.searchBoth
+{
+    width: 330px;
+}
+.searchSingle
+{
+    width:235px;
+}
+
+/*表格*/
+.panel,.panel-heading,.thumbnail
+{
+    border-color: #399494;
+    border-width: 1px;
+}
+.panel-heading
+{
+    font-size: 20px;
+    background-color: #399494;
+    color: #E6F0F3;
 }
 .table  >tbody >tr >td{
     vertical-align: middle;
     width: 28%;
 }
-
-
 .table .users >tr >td
 {
     width: 30%;
@@ -171,51 +218,41 @@
 {
     height: 40px;
 }
+
+
+/*缩略图*/
 .thumbnail
 {
     width:262px;
     float: left;
     margin: 11px;
-    /*-webkit-transition: width 2s,height 2s,-webkit-transform 2s;*/
 }
-/*.thumbnail:hover*/
-/*{*/
-    /*width: 300px;*/
-    /*height: 400px;*/
-    /*transform: rotate(360deg);*/
-    /*-webkit-transform: rotate(360deg);*/
-/*}*/
 .thumbnail button
 {
     position: relative;
 }
-/*.thumbnail_tool_group*/
-/*{*/
-    /*height: 0px;*/
-/*}*/
-/*.thumbnail_tool_group:hover*/
-/*{*/
-    /*animation: anim 5s;*/
-    /*-webkit-animation: anim 5s;*/
-/*}*/
-/*@keyframes anim {*/
-    /*0%{opacity: 0}*/
-    /*25%{opacity: 0.25}*/
-    /*50%{opacity: 0.5 }*/
-    /*75%{opacity: 0.75}*/
-    /*100%{opacity: 1}*/
-/*}*/
-/*@-webkit-keyframes anim {*/
-    /*0%{opacity: 0}*/
-    /*25%{opacity: 0.25}*/
-    /*50%{opacity: 0.5 }*/
-    /*75%{opacity: 0.75}*/
-    /*100%{opacity: 1}*/
-/*}*/
+.thumbnail_tool_group:hover
+{
+    animation: anim 1s;
+    -webkit-animation: anim 1s;
+}
+@keyframes anim {
+    0%{opacity: 0}
+    25%{opacity: 0.35}
+    50%{opacity: 0.65 }
+    75%{opacity: 0.85}
+    100%{opacity: 1}
+}
+@-webkit-keyframes anim {
+    0%{opacity: 0}
+    25%{opacity: 0.25}
+    50%{opacity: 0.5 }
+    75%{opacity: 0.75}
+    100%{opacity: 1}
+}
 .thumbnail_tool_group #quikeview
 {
     top: -170px;
-
 }
 .thumbnail_tool_group #bigger
 {
@@ -242,33 +279,45 @@
     /*background: url("pic/djisale.jpg");用不了，不造为啥---已经解决，注意css文件所在位置*/
 }
 
-    /*按钮*/
-.btn-lightBlu,.btn-lightBlu:visited
-{
-    background-color: #49A7A7;
-    color: #E6F0F3;
-}
-.btn-lightBlu:hover,.btn-lightBlu:active
-{
-    background-color:#399494;
-    color: #ffffff;
 
-}
-.btn-black
+
+
+/*页脚*/
+footer
 {
-    background-color: #333;
-    color: #ffffff;
+    background-color: #333333;
+    color: #B8B8B8;
+    border-top:2px solid #399494;
+    font-size: 10px;
+    padding:30px 0px;
 }
-.btn-black:hover,.btn-black:active
+footer span
 {
-    background-color:#399494;
-    color: #E6F0F3;
+    margin:0px 5px;
 }
-.searchBoth
+footer a:hover,footer a:active
 {
-    width: 330px;
+    /*background-color: rgba(0, 0, 0, 0);*/
 }
-.searchSingle
+footer a,footer a:visited
 {
-    width:235px;
+    color: #B8B8B8;
+    text-decoration:none;
+}
+.home_footer,.brand_footer
+{
+    width: 100%;
+}
+.home_footer li
+{
+    width: 33.333%;
+}
+.brand_footer
+{
+    padding: 10px 0px;
+    border-top:1px dotted #676666;
+}
+.brand_footer .info
+{
+    width: 85%;
 }
