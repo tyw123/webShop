@@ -1,15 +1,21 @@
 /**
  * Created by tyw on 16-3-11.
  */
-var userData={account:"我的账户",items:["登陆","注册"]}
 
+
+var userData={account:"我的账户",items:["登陆","注册"],shopNum:14};
+var brandProduct=["brandProduct1","brandProduct2","brandProduct3","brandProduct4"];
+var shopNavItem=["item1","item2","item3","item4"];
+var buyerInfo=[{name:"lily",address:"XXstreet,NO.xx",phone:"12353235"},{name:"二花.王",address:"XXstreet,NO.xx",phone:"12353235"}];
+var receipt={goods:[{picUrl:"pic/phantom3.jpg",name:"xxx",price:123,save:12},
+                    {picUrl:"pic/phantom3.jpg",name:"xxx",price:123,save:12}],
+                    total:1234,saved:123};
 
 
 var BrandFooter=React.createClass({
     render:function(){
         return(
             <div id="brandFooter">
-                brandFooter
                 <HomeFooter />
                 <ul className="nav navbar-nav navbar-left brand_footer">
                     <li role="presentation" className="info">
@@ -58,7 +64,6 @@ var Footer=React.createClass({
             <footer >
                 <div className="container">
                     <nav className="navbar " role="navigation">
-                        <h3>footer</h3>
                         <HomeFooter />
                         <BrandFooter />
                     </nav>
@@ -135,7 +140,6 @@ var ThumbnailBox=React.createClass({
     render:function(){
         return(
             <div id="thumbnail_box">
-                thumbnail_box
                 <Thumbnail />
                 <Thumbnail />
             </div>
@@ -181,8 +185,8 @@ var JumbotromPic=React.createClass({
 var Jumbotron=React.createClass({
     render:function(){
         return(
-            <div id="jumbotron">
-                jumbotron
+            <div id="jumbotron" className="cleanfix">
+
                 <JumbotromPic />
                 <JumbotromToolGroup />
                 <JumbotromSlideNav />
@@ -197,11 +201,11 @@ var CartItem=React.createClass({
             <tr>
                 <td>
                     <input className="btn btn-default" type="checkbox"></input>
-                    <img src="pic/phantom3.jpg" width="150"></img>
+                    <img src={this.props.goodInfo.picUrl} width="150"></img>
                     name
                 </td>
                 <td>
-                    <small>￥<s>xxxx</s><strong>XXXX</strong>/RMB</small>
+                    <small>￥<s>{this.props.goodInfo.save}</s><strong>{this.props.goodInfo.price}</strong>/RMB</small>
                 </td>
                 <td>
                     <div className="input-group num-set">
@@ -223,6 +227,11 @@ var CartItem=React.createClass({
 
 var Cart=React.createClass({
     render:function(){
+        var cartItem=this.props.receipt.goods.map(function(good){
+            return(
+                <CartItem goodInfo={good} />
+            );
+        });
         return(
             <div className="panel">
                 <div className="panel-heading" >
@@ -240,19 +249,15 @@ var Cart=React.createClass({
                         </tr>
                         </thead>
                         <tbody>
-                            <CartItem />
-                            <CartItem />
+                        {cartItem}
                         </tbody>
                     </table>
                     <div className="tfoot col-md-4">
                         <div className="text-right col-md-8">
-                            <p className="cleanfix">共计￥XXXX</p>
-                            <p className="cleanfix">已节省￥XXXX</p>
+                            <p className="cleanfix">共计￥{this.props.receipt.total}</p>
+                            <p className="cleanfix">已节省￥{this.props.receipt.saved}</p>
                         </div>
-                        <button type="button" className="btn btn-lightBlu col-md-4" aria-label="Left Align">
-                            去结算
-                            <span className="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                        </button>
+                        <SettleAccounts />
                     </div>
                 </div>
             </div>
@@ -266,21 +271,17 @@ var HarvestInfo=React.createClass({
             <tr>
                 <td>
                     <input className="btn btn-default" type="radio" name="buyer"></input>
-                        name
+                    {this.props.buyerInfo.name}
                 </td>
                 <td>
-                    address
+                    {this.props.buyerInfo.address}
                 </td>
                 <td>
-                    phone
+                    {this.props.buyerInfo.phone}
                 </td>
                 <td>
-                    <button type="button" className="btn btn-lightBlu" aria-label="Left Align">
-                        <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" className="btn btn-lightBlu" aria-label="Left Align">
-                        <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                    </button>
+                    <EditButton />
+                    <DeleteButton />
                 </td>
             </tr>
         );
@@ -289,6 +290,11 @@ var HarvestInfo=React.createClass({
 
 var HarvestConfirm=React.createClass({
     render:function(){
+        var harvestInfo=this.props.buyer.map(function(buyer){
+            return(
+                <HarvestInfo buyerInfo={buyer} />
+            );
+        });
      return(
          <div className="panel">
              <div className="panel-heading">
@@ -305,15 +311,11 @@ var HarvestConfirm=React.createClass({
                      </tr>
                      </thead>
                      <tbody className="flex-center users">
-                        <HarvestInfo />
-                        <HarvestInfo />
+                     {harvestInfo}
                      </tbody>
                  </table>
                  <div className="tfoot">
-                     <button type="button" className="btn btn-lightBlu" aria-label="Left Align">
-                         <span className="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                         新增收货地址
-                     </button>
+                    <AddAddress />
                  </div>
              </div>
          </div>
@@ -325,9 +327,39 @@ var Table=React.createClass({
     render:function(){
         return(
             <div id="table">
-                table
-                <HarvestConfirm />
-                <Cart />
+                <HarvestConfirm buyer={buyerInfo}/>
+                <Cart receipt={receipt}/>
+            </div>
+        );
+    }
+});
+
+var SearchBoth=React.createClass({
+    render:function(){
+        return(
+            <div className="input-group searchBoth">
+                <input type="text" className="form-control"></input>
+                    <span className="input-group-btn">
+                        <button className="btn btn-black">搜全站</button>
+                    </span>
+                    <span className="input-group-btn">
+                        <button className="btn btn-black">搜本店</button>
+                    </span>
+            </div>
+        );
+    }
+});
+
+var SearchSingle=React.createClass({
+    render:function(){
+        return(
+            <div className="input-group searchSingle">
+                <input type="text" className="form-control"></input>
+                    <span className="input-group-btn">
+                        <button className="btn btn-black">
+                            <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    </span>
             </div>
         );
     }
@@ -337,29 +369,115 @@ var Input=React.createClass({
     render:function(){
         return(
             <div id="input">
-                input button
-                <div className="input-group searchSingle">
-                    <input type="text" className="form-control"></input>
-                    <span className="input-group-btn">
-                        <button className="btn btn-black">
-                            <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
-                        </button>
-                    </span>
-                </div>
+                <SearchSingle />
                 <input className="btn btn-default" type="radio" name="buyer"></input>
                 <input className="btn btn-default" type="checkbox"></input>
-                <div className="input-group searchBoth">
-                    <input type="text" className="form-control"></input>
-                    <span className="input-group-btn">
-                        <button className="btn btn-black">搜全站</button>
-                    </span>
-                    <span className="input-group-btn">
-                        <button className="btn btn-black">搜本店</button>
-                    </span>
-                </div>
+                <SearchBoth />
                 <input type="number" className="form-control num-set" placeholder="1"></input>
-
             </div>
+        );
+    }
+});
+
+var QuickeView=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                QuikeView
+            </button>
+        );
+    }
+});
+
+var MoreButton=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                更多
+            </button>
+        );
+    }
+});
+
+var AddAddress=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                <span className="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                新增收货地址
+            </button>
+        );
+    }
+});
+
+var AddButton=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                <span className="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            </button>
+        );
+    }
+});
+
+var FollowButton=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                <span className="glyphicon glyphicon-heart" aria-hidden="true"></span>
+            </button>
+        );
+    }
+});
+
+var EditButton=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+            </button>
+        );
+    }
+});
+
+var EnlargeButton=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                <span className="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+            </button>
+        );
+    }
+});
+
+var DeleteButton=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
+            </button>
+        );
+    }
+});
+
+var SettleAccounts=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                去结算
+                <span className="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+            </button>
+        );
+    }
+});
+
+var GoOnShopping=React.createClass({
+    render:function(){
+        return(
+            <button type="button" className="btn-lightBlu" aria-label="Left Align">
+                <span className="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                继续购物
+            </button>
         );
     }
 });
@@ -368,46 +486,16 @@ var Button=React.createClass({
     render:function(){
         return(
             <div id="button">
-                button
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    <span className="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    <span className="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    继续购物
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    <span className="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    去结算
-                    <span className="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    <span className="glyphicon glyphicon-trash" aria-hidden="true"></span>
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    <span className="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    <span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    <span className="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    <span className="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    <span className="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                    新增收货地址
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    更多
-                </button>
-                <button type="button" className="btn-lightBlu" aria-label="Left Align">
-                    QuikeView
-                </button>
+                <GoOnShopping />
+                <SettleAccounts />
+                <DeleteButton />
+                <EnlargeButton />
+                <EditButton />
+                <FollowButton />
+                <AddButton />
+                <AddAddress />
+                <MoreButton />
+                <QuickeView />
             </div>
         );
     }
@@ -415,39 +503,36 @@ var Button=React.createClass({
 
 var BrandNav=React.createClass({
     render:function(){
+        var brandProducts=this.props.brandProduct.map(function(product){
+            return(
+                <li role="presentation"><a href="#">{product}</a></li>
+            );
+        });
         return(
-            <nav className="navbar navbar-default" role="navigation">
-                brandNav
-                <ul className="nav navbar-nav navbar-left">
-                    <li role="presentation"><a href="#">brandProduct1</a></li>
-                    <li role="presentation"><a href="#">brandProduct2</a></li>
-                    <li role="presentation"><a href="#">brandProduct3</a></li>
-                    <li role="presentation"><a href="#">brandProduct4</a></li>
-                </ul>
-            </nav>
+            <div className="container">
+                <nav className="navbar navbar-default" role="navigation">
+                    <ul className="nav navbar-nav navbar-left">
+                        {brandProducts}
+                    </ul>
+                </nav>
+            </div>
         );
     }
 });
 
 var GlobalWrapper=React.createClass({
     render:function(){
+        var shopNavItems=this.props.items.map(function(item){
+            return(
+                <li role="presentation"><a href="#" className="upLine">{item}</a></li>
+            );
+        });
         return(
             <ul className="nav navbar-nav navbar-right global_wrapper">
-                <li><a href="#" className="upLine">item1</a></li>
-                <li><a href="#" className="upLine">item1</a></li>
-                <li><a href="#" className="upLine">item1</a></li>
-                <li><a href="#" className="upLine">item1</a></li>
+                {shopNavItems}
                 <li>
                     <a href="#">
-                        <div className="input-group searchBoth">
-                            <input type="text" className="form-control"></input>
-                            <span className="input-group-btn">
-                                <button className="btn btn-black">搜全站</button>
-                            </span>
-                            <span className="input-group-btn">
-                                <button className="btn btn-black">搜本店</button>
-                            </span>
-                        </div>
+                        <SearchBoth />
                     </a>
                 </li>
             </ul>
@@ -476,9 +561,8 @@ var ShopNav=React.createClass({
         return(
             <nav className="navbar navbar-default shopNav" role="navigation">
                 <div className="container">
-                    shopNav
                     <Logo />
-                    <GlobalWrapper />
+                    <GlobalWrapper items={shopNavItem}/>
                 </div>
             </nav>
         );
@@ -489,10 +573,9 @@ var ShopCart=React.createClass({
     render:function(){
         return(
             <li role="presentation">
-                shopCart
                 <a href="#">
                     购物车
-                    <span className="badge">14</span>
+                    <span className="badge">{this.props.shopNum}</span>
                 </a>
             </li>
         );
@@ -501,17 +584,17 @@ var ShopCart=React.createClass({
 
 var UserAccount=React.createClass({
     render:function(){
+        var userAccountItems=this.props.items.map(function(item){
+            return(<li><a href="#">{item}</a></li>);
+        });
         return(
             <li className="dropdown">
-                userAccount
                 <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                    我的账户
+                    {this.props.account}
                     <b className="caret"></b>
                 </a>
                 <ul className="dropdown-menu">
-                    <li><a href="#">登陆</a></li>
-                    <li><a href="#">注册</a></li>
-                    <li><a href="#">退出登陆</a></li>
+                    {userAccountItems}
                 </ul>
             </li>
         );
@@ -523,10 +606,9 @@ var  UserNav=React.createClass({
         return(
             <div className="userNav">
                 <div className="container">
-                    userNav
                     <ul>
-                        <UserAccount />
-                        <ShopCart />
+                        <UserAccount account={this.props.userData.account} items={this.props.userData.items}/>
+                        <ShopCart shopNum={this.props.userData.shopNum}/>
                         <li role="presentation"><a href="#">收藏夹</a></li>
                         <li role="presentation"><a href="#">客户服务</a></li>
                     </ul>
@@ -540,8 +622,7 @@ var Header = React.createClass({
     render: function() {
         return (
             <header>
-                <h3>header</h3>
-                <UserNav />
+                <UserNav userData={userData} />
                 <ShopNav />
             </header>
         );
@@ -552,11 +633,10 @@ var StyleGuide=React.createClass({
     render:function(){
         return(
             <div>
-                <h1>home</h1>
                 <Header />
+                <BrandNav brandProduct={brandProduct}/>
                 <Jumbotron />
                 <div className="container">
-                    <BrandNav />
                     <Button />
                     <Input/>
                     <Table />
@@ -564,7 +644,6 @@ var StyleGuide=React.createClass({
                     <BrandBox />
                 </div>
                 <Footer />
-
             </div>
         );
     }
