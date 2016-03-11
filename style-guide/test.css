@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/*.navbar,.table,.tfoot p,.jumbotron, #thumbnail_box .container .row*/
+/*全局样式*/
+.tfoot, .tool_group .next {
+  float: right;
+  margin-right: 9px; }
+
+.cleanfix, header, .userNav .dropdown-menu, .userNav .dropdown-menu a, .navbar {
+  border: 0px;
+  margin: 0px;
+  padding: 0px; }
+
+button, .input-group-btn button {
+  outline: none;
+  border: 0px;
+  border-radius: 4px;
+  padding: 7px 13px; }
+
+strong {
+  font-size: 20px; }
+
+.back_blue {
+  background-color: #399494;
+  color: #E6F0F3;
+  padding:5px;width: 270px;position:relative;left: -18px;border-radius: 1px
+}
+
+/*导航栏*/
+/*用户导航栏*/
+.userNav {
+  height: 35px;
+  background-color: #399494; }
+  .userNav ul {
+    list-style: none;
+    float: right;
+    padding: 5px 0px; }
+  .userNav a {
+    color: #C3D6DC;
+    text-align: center;
+    text-decoration: none; }
+    .userNav a:hover, .userNav a:active {
+      color: #ffffff; }
+  .userNav li {
+    display: inline;
+    margin: 0px 10px; }
+  .userNav .badge {
+    color: #399494;
+    background-color: #C3D6DC; }
+  .userNav .dropdown-menu {
+    min-width: 10px;
+    width: 73px;
+    background-color: #399494; }
+    .userNav .dropdown-menu a {
+      background-color: #399494;
+      color: #C3D6DC; }
+      .userNav .dropdown-menu a:hover {
+        background-color: #399494;
+        color: #ffffff; }
+
+/*商城首页导航栏*/
+.shopNav {
+  border-bottom: 1px solid #399494; }
+  .shopNav .global_wrapper {
+    height: 95px;
+    padding: 22.5px 0px;
+    left: 1px;
+    font-weight: bold; }
+    .shopNav .global_wrapper .input-group {
+      top: -7px; }
+  .shopNav .upLine:hover, .shopNav .upLine:active {
+    border-top: 3px solid #399494; }
+  .shopNav .logo > li > a {
+    border-right: 1px solid #E6E6E6;
+    padding: 0px 10px;
+    margin: 30px 0px;
+    text-shadow: 4px 4px 4px #333; }
+
+/*巨幕*/
+.jumbotron {
+  background-color: #ffffff; }
+
+.tool_group span, .tool_group span:visited {
+  position: relative;
+  top: -475px;
+  height: 475px;
+  width: 90px;
+  text-align: center;
+  padding: 220px 0px;
+  font-size: 35px;
+  opacity: 0;
+  cursor: pointer; }
+  .tool_group span:hover, .tool_group span:active, .tool_group span:visited:hover, .tool_group span:visited:active {
+    color: #49A7A7;
+    background: rgba(0, 40, 60, 0);
+    opacity: 1; }
+
+.tool_group .prev {
+  float: left;
+  margin-left: 10px; }
+
+.slide_nav {
+  position: relative;
+  top: -30px;
+  text-align: center; }
+  .slide_nav i {
+    display: inline-block;
+    background-color: #777;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 2px; }
+    .slide_nav i:hover, .slide_nav i:active {
+      background-color: #399494; }
+
+/*按钮*/
+.btn-lightBlu, .btn-lightBlu:visited {
+  background-color: #49A7A7;
+  color: #E6F0F3; }
+  .btn-lightBlu:hover, .btn-lightBlu:active, .btn-lightBlu:visited:hover, .btn-lightBlu:visited:active {
+    background-color: #399494;
+    color: #ffffff; }
+
+/*btn-black:visited---尚未解决，去掉btn，按钮组的样式出问题，保存btn,无法设定自定义的visited样式*/
+.btn-black, .btn-black:visited {
+  background-color: #333;
+  color: #ffffff; }
+  .btn-black:hover, .btn-black:active, .btn-black:visited:hover, .btn-black:visited:active {
+    background-color: #399494;
+    color: #E6F0F3; }
+
+.searchBoth {
+  width: 330px; }
+
+.searchSingle {
+  width: 235px; }
+
+.num-set {
+  width: 70px; }
+
+/*表格*/
+.panel, .panel-heading, .thumbnail {
+  border-color: #399494;
+  border-width: 1px; }
+
+.panel-heading {
+  font-size: 20px;
+  background-color: #399494;
+  color: #E6F0F3; }
+
+.table > tbody > tr > td {
+  vertical-align: middle;
+  width: 28%; }
+
+.table .users > tr > td {
+  width: 30%; }
+
+.tfoot button, .tool_group .next button {
+  height: 40px; }
+
+/*缩略图*/
+.thumbnail {
+  width: 262px;
+  float: left;
+  margin: 11px; }
+  .thumbnail button {
+    position: relative; }
+
+.thumbnail_tool_group:hover {
+  animation: anim 1s;
+  -webkit-animation: anim 1s; }
+
+.thumbnail_tool_group #quikeview {
+  top: -170px; }
+
+.thumbnail_tool_group #bigger {
+  top: -30px;
+  left: 70px; }
+
+.thumbnail_tool_group #heart {
+  top: -30px;
+  left: 70px; }
+
+.thumbnail_tool_group #add {
+  top: -170px;
+  left: 25px; }
+
+@keyframes anim {
+  0% {
+    opacity: 0; }
+  25% {
+    opacity: 0.35; }
+  50% {
+    opacity: 0.65; }
+  75% {
+    opacity: 0.85; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes anim {}.brand {
+  text-align: center;
+  width: 120px;
+  float: left;
+  margin: 10px;
+  /*background: url("../pic/djisale.jpg");*/
+  /*background: url("pic/djisale.jpg");用不了，不造为啥---已经解决，注意css文件所在位置*/ }
+
+/*页脚*/
+footer {
+  background-color: #333333;
+  color: #B8B8B8;
+  border-top: 2px solid #399494;
+  font-size: 10px;
+  padding: 30px 0px; }
+
+footer span {
+  margin: 0px 5px; }
+
+footer a:hover, footer a:active {
+  /*background-color: rgba(0, 0, 0, 0);*/ }
+
+footer a, footer a:visited {
+  color: #B8B8B8;
+  text-decoration: none; }
+
+.home_footer, .brand_footer {
+  width: 100%; }
+
+.home_footer li {
+  width: 33.333%; }
+
+.brand_footer {
+  padding: 10px 0px;
+  border-top: 1px dotted #676666; }
+
+.brand_footer .info {
+  width: 85%; }

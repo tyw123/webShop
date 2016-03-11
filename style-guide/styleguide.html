@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>styleGuide</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="test.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="userNav">
+        <div class="container">
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        我的账户
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">登陆</a></li>
+                        <li><a href="#">注册</a></li>
+                        <li><a href="#">退出登陆</a></li>
+                    </ul>
+                </li>
+                <li role="presentation"><a href="#">
+                    购物车
+                    <span class="badge">14</span>
+                </a></li>
+                <li role="presentation"><a href="#">收藏夹</a></li>
+                <li role="presentation"><a href="#">客户服务</a></li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-default shopNav" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav logo ">
+                <li role="presentation" ><a href="#">
+                    <!--<img alt="Brand" class="img-responsive" src="pic/images.png">-->
+                    <h1>UAV Shop </h1>
+                </a>
+                </li>
+                <li>
+                    <a href="#">
+                        logo2
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right global_wrapper">
+                <li><a href="#" class="upLine">item1</a></li>
+                <li><a href="#" class="upLine">item1</a></li>
+                <li><a href="#" class="upLine">item1</a></li>
+                <li><a href="#" class="upLine">item1</a></li>
+                <li>
+                    <a href="#">
+                        <div class="input-group searchBoth">
+                            <input type="text" class="form-control">
+                <span class="input-group-btn">
+                   <button class="btn btn-black">搜全站</button>
+                </span>
+                <span class="input-group-btn">
+                   <button class="btn btn-black">搜本店</button>
+                </span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <ul class="nav navbar-nav navbar-left">
+            <li role="presentation"><a href="#">brandProduct1</a></li>
+            <li role="presentation"><a href="#">brandProduct2</a></li>
+            <li role="presentation"><a href="#">brandProduct3</a></li>
+            <li role="presentation"><a href="#">brandProduct4</a></li>
+        </ul>
+    </div>
+</nav>
+<div id="button">
+    <div class="container">
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            继续购物
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            去结算
+            <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+            新增收货地址
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            更多
+        </button>
+        <button type="button" class="btn-lightBlu" aria-label="Left Align">
+            QuikeView
+        </button>
+    </div>
+</div>
+<div id="input">
+    <div class="container">
+        <div class="input-group searchSingle">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+                <button class="btn btn-black">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+            </span>
+        </div>
+        <input class="btn btn-default" type="radio" name="buyer">
+        <input class="btn btn-default" type="checkbox">
+        <div class="input-group searchBoth">
+            <input type="text" class="form-control">
+                <span class="input-group-btn">
+                   <button class="btn btn-black">搜全站</button>
+                </span>
+                <span class="input-group-btn">
+                   <button class="btn btn-black">搜本店</button>
+                </span>
+        </div>
+        <div class="input-group" style="width:70px;">
+            <input type="number" class="form-control" placeholder="1">
+        </div>
+    </div>
+</div>
+<div id="table">
+    <div class="container">
+        <div class="panel">
+            <div class="panel-heading">
+                确认收货信息
+            </div>
+            <div class="panel-body">
+                <table class="table cleanfix">
+                    <thead>
+                    <tr>
+                        <th>收货人</th>
+                        <th>收货地址</th>
+                        <th>联系方式</th>
+                        <th> </th>
+                    </tr>
+                    </thead>
+                    <tbody class="flex-center users">
+                        <tr>
+                        <td>
+                            <input class="btn btn-default" type="radio" name="buyer">
+                            name
+                        </td>
+                        <td>
+                            address
+                        </td>
+                        <td>
+                            phone
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                    </tr>
+                        <tr>
+                        <td>
+                            <input class="btn btn-default" type="radio" name="buyer">
+                            name
+                        </td>
+                        <td>
+                            address
+                        </td>
+                        <td>
+                            phone
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="tfoot">
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        新增收货地址
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-heading" >
+                我的购物车
+            </div>
+            <div class="panel-body" >
+                <table class="table cleanfix" >
+                    <thead>
+                    <tr>
+                        <th>商品</th>
+                        <th>价格</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr >
+                        <td>
+                            <input class="btn btn-default" type="checkbox">
+                            <img src="pic/phantom3.jpg" width="150">
+                            name
+                        </td>
+                        <td >
+                            <small>￥<strong>XXXX</strong>/RMB</small>
+                        </td>
+                        <td>
+                            <div class="input-group" style="width:70px;">
+                                <input type="number" class="form-control" placeholder="1">
+                            </div>
+                        </td>
+                        <td>
+                            <small>￥<strong>XXXX</strong>/RMB</small>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="btn btn-default" type="checkbox">
+                            <img src="pic/phantom3.jpg" width="150">
+                            name
+                        </td>
+                        <td>
+                            <small>￥<s>xxxx</s><strong>XXXX</strong>/RMB</small>
+                        </td>
+                        <td>
+                            <div class="input-group" style="width:70px;">
+                                <input type="number" class="form-control" placeholder="1">
+                            </div>
+                        </td>
+                        <td>
+                            <small>￥<s>xxxx</s><strong>XXXX</strong>/RMB</small>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-lightBlu" aria-label="Left Align">
+                                <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="tfoot col-md-4" style="text-align: right">
+                    <div class="text-right col-md-8">
+                        <p class="cleanfix">共计￥XXXX</p>
+                        <P class="cleanfix">已节省￥XXXX</P>
+                    </div>
+                    <button type="button" class="btn btn-lightBlu col-md-4" aria-label="Left Align">
+                        去结算
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="jumbotron">
+    <div class="jumbotron cleanfix">
+        <div class="container">
+            <img alt="Brand" class="img-responsive hidden" src="pic/djisale.jpg">
+            <img alt="Brand" class="img-responsive " src="pic/djisale2.jpg">
+            <!--按钮放到里面，就有下边距，放到外面，padding又不知道怎么处理-->
+        </div>
+    </div>
+    <div class="tool_group">
+        <span class="glyphicon glyphicon-menu-left prev" aria-hidden="true"></span>
+        <span class="glyphicon glyphicon-menu-right next" aria-hidden="true"></span>
+    </div>
+    <div class="slide_nav">
+        <i></i>
+        <i class="active"></i>
+    </div>
+</div>
+<div id="thumbnail_box">
+    <div class="container">
+        <div class="row">
+            <div class="thumbnail ">
+                <img src="pic/phantom3.jpg" alt="...">
+                <div class="thumbnail_tool_group">
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="quikeview">
+                        QuikeView
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="bigger">
+                        <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="heart">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="add">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="caption">
+                    <strong>name</strong>
+                    <div class="back_blue" style="padding:5px;width: 270px;position:relative;left: -18px;border-radius: 1px">
+                        <small>￥<strong>XXXX</strong>/RMB</small>
+                    </div>
+                    <p>...</p>
+                </div>
+            </div>
+            <div class="thumbnail ">
+                <img src="pic/phantom3.jpg" alt="...">
+                <div class="thumbnail_tool_group">
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="quikeview">
+                        QuikeView
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="bigger">
+                        <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="heart">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="add">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="caption">
+                    <strong>name</strong>
+                    <div class="back_blue" style="padding:5px;width: 270px;position:relative;left: -18px;border-radius: 1px">
+                        <small>￥<strong>XXXX</strong>/RMB</small>
+                    </div>
+                    <p>...</p>
+                </div>
+            </div>
+            <div class="thumbnail ">
+                <img src="pic/phantom3.jpg" alt="...">
+                <div class="thumbnail_tool_group">
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="quikeview">
+                        QuikeView
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="bigger">
+                        <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="heart">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="add">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="caption">
+                    <strong>name</strong>
+                    <div class="back_blue" style="padding:5px;width: 270px;position:relative;left: -18px;border-radius: 1px">
+                        <small>￥<strong>XXXX</strong>/RMB</small>
+                    </div>
+                    <p>...</p>
+                </div>
+            </div>
+            <div class="thumbnail ">
+                <img src="pic/phantom3.jpg" alt="...">
+                <div class="thumbnail_tool_group">
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="quikeview">
+                        QuikeView
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="bigger">
+                        <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="heart">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-lightBlu" aria-label="Left Align" id="add">
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <div class="caption">
+                    <strong>name</strong>
+                    <div class="back_blue" style="padding:5px;width: 270px;position:relative;left: -18px;border-radius: 1px">
+                        <small>￥<strong>XXXX</strong>/RMB</small>
+                    </div>
+                    <p>...</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+            <div class="brand">
+                <h4>大疆</h4>
+                <a href="#">
+                    <img src="pic/dji.jpg" class="img-responsive" style="max-width: 120px">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <nav class="navbar " role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav home_footer">
+                <li role="presentation">
+                    <h4><strong>Contact Us</strong></h4>
+                    <p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>152****7707</p>
+                    <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>106****674@qq.com</p>
+                    <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span>guess where</p>
+                </li>
+                <li role="presentation">
+                    <h4><strong>About Us</strong></h4>
+                    <p>我们是五月的花海，用青春拥抱时代；</p>
+                    <p>我们是初升的太阳，用生命点燃未来。</p>
+                    <p>我们是一群专注卖无人机，卖好无人机的四有好青年。</p>
+                </li>
+                <li role="presentation">
+                    <h4><strong>What's More</strong></h4>
+                    <p><a href="#">创客社区</a></p>
+                    <p><a href="#">开发者论坛</a></p>
+                    <p><a href="#">加入我们</a></p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav home_footer">
+                <li role="presentation" class="contactUs">
+                    <h4><strong>Contact Us</strong></h4>
+                    <p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>152****7707</p>
+                    <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>106****674@qq.com</p>
+                    <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span>guess where</p>
+                </li>
+                <li role="presentation" class="aboutUs">
+                    <h4><strong>About Us</strong></h4>
+                    <p>我们是五月的花海，用青春拥抱时代；</p>
+                    <p>我们是初升的太阳，用生命点燃未来。</p>
+                    <p>我们是一群专注卖无人机，卖好无人机的四有好青年。</p>
+                </li>
+                <li role="presentation" class="whatIsMore">
+                    <h4><strong>What's More</strong></h4>
+                    <p><a href="#">创客社区</a></p>
+                    <p><a href="#">开发者论坛</a></p>
+                    <p><a href="#">加入我们</a></p>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-left brand_footer">
+                <li role="presentation" class="info">
+                    <!--<h4><strong>Contact DJI</strong></h4>-->
+                    <p title="Phone" class="text-left">售前服务热线：400-700-0333</p>
+                    <p title="Phone" class="text-left">技术支持服务热线：400-700-0303</p>
+                </li>
+                <li role="presentation">
+                    <h1 class="cleanfix"><a href="http://www.dji.com/" target="_blank">大疆创新</a></h1>
+                </li>
+                <!--<li role="presentation"><a href="http://www.dji.com/" target="_blank">-->
+                    <!--<img alt="Brand" class="img-responsive" src="http://www4.djicdn.com/assets/images/logo@2x-da7b16c3c5788410b42880cd8a8cfeca.png">-->
+                <!--</a></li>-->
+            </ul>
+        </div>
+    </nav>
+</footer>
+<script src="js/styleguide.js"></script>
+<script src="script/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
